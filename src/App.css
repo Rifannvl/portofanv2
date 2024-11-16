@@ -40,3 +40,47 @@
 .read-the-docs {
   color: #888;
 }
+/* Tambahkan ke CSS */
+.active-button {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  transform: translateY(2px); /* Efek pergeseran */
+}
+/* Efek dasar ketika tombol tidak aktif */
+.nav-link {
+  background-color: #e0e0e0; /* Warna latar belakang normal */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transisi untuk animasi */
+}
+
+/* Efek ketika tombol aktif/tertekan */
+.nav-link.active {
+  background-color: #b0bec5; /* Warna latar belakang saat aktif */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek tertekan */
+  transform: translateY(2px); /* Memberikan efek pergeseran */
+}
+
+/* Efek ketika tombol diklik (tahan sementara) */
+.nav-link:active {
+  transform: translateY(4px); /* Pergerakan lebih besar saat diklik */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan lebih intens saat aktif */
+}
+/* Animasi lebih smooth dengan keyframes */
+@keyframes pressAnimation {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    transform: translateY(2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Tambahkan animasi saat aktif */
+.nav-link.active {
+  animation: pressAnimation 0.3s ease-in-out forwards;
+}
+/* Menambahkan CSS kustom jika menggunakan efek active */
+.nav-link:active {
+  transform: translateY(4px); /* Efek pergeseran lebih kuat saat diklik */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat saat aktif */
+}
