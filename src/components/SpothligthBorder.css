@@ -1,0 +1,11 @@
+.spotlight-border {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 10px; /* Match the card's border radius */
+  pointer-events: none; /* Prevent the border from blocking mouse events */
+  transition: background 0.3s ease; /* Smooth transition for the background */
+  z-index: 0; /* Ensure it stays behind the card content */
+}
