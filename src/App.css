@@ -84,3 +84,42 @@
   transform: translateY(4px); /* Efek pergeseran lebih kuat saat diklik */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat saat aktif */
 }
+/* moving outline  */
+/* MovingOutline.css */
+.moving-outline {
+  position: relative;
+  padding: 20px; /* Adjust padding as needed */
+  background-color: white; /* Background color of the card */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.moving-outline::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid rgba(0, 130, 206, 0.75); /* Border color */
+  border-radius: 8px; /* Match the card's border radius */
+  animation: moveOutline 2s linear infinite; /* Animation */
+}
+
+@keyframes moveOutline {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  75% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
