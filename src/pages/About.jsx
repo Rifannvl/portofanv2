@@ -1,6 +1,6 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion"; // Import motion
+import Embed from "../components/EmbedTiktok";
 
 export default function About() {
   useEffect(() => {
@@ -50,13 +50,8 @@ export default function About() {
           <p>Find me on TikTok</p>
         </div>
         <div>
-          <iframe
-            src="https://www.tiktok.com/embed/@rvnll_"
-            width="830"
-            height="480"
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
+          {/* Render the TikTok embed using dangerouslySetInnerHTML */}
+          <Embed tiktokUrl="https://www.tiktok.com/@Rvnll_" uniqueId="Rvnll_" />
           <hr className="border-t-2 border-dotted shadow-inherit border-gray-400 my-4" />
         </div>
 
